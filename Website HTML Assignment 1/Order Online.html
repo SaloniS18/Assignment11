@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A Vegetarian Restaurant offering delicious and healthy plant-based meals.">
+    <title>Vegetarian Delight Restaurant - Order Online</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #5e0635;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #e67e22;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .menu, .specials {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .menu-item, .special-item {
+            width: 30%;
+            margin-bottom: 20px;
+            text-align: center;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .menu-item:hover, .special-item:hover {
+            transform: scale(1.05);
+        }
+
+        .menu-item h3, .special-item h3 {
+            font-size: 1.5em;
+            color: #2c8a3c;
+        }
+
+        .menu-item p, .special-item p {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .specials {
+            margin-top: 40px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer-links a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .order-btn {
+            background-color: #2c8a3c;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1em;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        .order-btn:hover {
+            background-color: #e67e22;
+        }
+
+        .cart {
+            margin-top: 40px;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .cart h2 {
+            color: #5e0635;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+        }
+
+        .cart-item p {
+            margin: 0;
+        }
+
+        .checkout-form {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .checkout-form input,
+        .checkout-form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .checkout-form input[type="submit"] {
+            background-color: #2c8a3c;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+        }
+
+        .checkout-form input[type="submit"]:hover {
+            background-color: #e67e22;
+        }
+
+        .menu-item img, .special-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Vegetarian Delight Restaurant</h1>
+    <p>Delicious plant-based meals for everyone!</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Menu</a>
+    <a href="#">Specials</a>
+    <a href="#">Contact</a>
+    <a href="#">Order Online</a>
+</nav>
+
+<div class="container">
+
+    <!-- Menu Section -->
+    <section class="menu">
+        <div class="menu-item">
+            <img src="SweetCornPizza.jpg" alt="Vegan Pizza">
+            <h3>Vegan Pizza</h3>
+            <p>A delicious, plant-based pizza with fresh vegetables and dairy-free cheese.</p>
+            <button class="order-btn" onclick="addToCart('Vegan Pizza', 250)">Add to Cart - Rs 250</button>
+        </div>
+        <div class="menu-item">
+            <img src="Quinoa vegg burger.webp" alt="Vegetarian Burger">
+            <h3>Vegetarian Burger</h3>
+            <p>A hearty veggie burger made with lentils and topped with fresh greens.</p>
+            <button class="order-btn" onclick="addToCart('Vegetarian Burger', 150)">Add to Cart - Rs 150</button>
+        </div>
+        <div class="menu-item">
+            <img src="Strawberry-Salad-0004.jpg" alt="Salad Bowl">
+            <h3>Salad Bowl</h3>
+            <p>A fresh mix of seasonal veggies and a tangy vinaigrette dressing.</p>
+            <button class="order-btn" onclick="addToCart('Salad Bowl', 120)">Add to Cart - Rs 120</button>
+        </div>
+    </section>
+
+    <!-- Special Offers Section -->
+    <section class="specials">
+        <div class="special-item">
+            <img src="veggi burger combo.jpg" alt="Vegan Burger">
+            <h3>Special Offer: Vegan Burger</h3>
+            <p>Try our new vegan burger at a discounted price this week!</p>
+            <button class="order-btn" onclick="addToCart('Vegan Burger', 120)">Add to Cart - Rs 120</button>
+        </div>
+        <div class="special-item">
+            <img src="by one get one free.jpg" alt="Seasonal Smoothies">
+            <h3>Seasonal Smoothies</h3>
+            <p>Refreshing smoothies made from seasonal fruits and plant-based milk.</p>
+            <button class="order-btn" onclick="addToCart('Seasonal Smoothies', 100)">Add to Cart - Rs 100</button>
+        </div>
+        <div class="special-item">
+            <img src="soup combo.jpg" alt="Organic Soup">
+            <h3>Organic Soup</h3>
+            <p>Warm up with our delicious and healthy organic soups.</p>
+            <button class="order-btn" onclick="addToCart('Organic Soup', 90)">Add to Cart - Rs 90</button>
+        </div>
+    </section>
+
+
+    <section class="cart" id="cart">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <p id="total-price">Total: Rs 1000</p>
+        <button class="order-btn" onclick="checkout()">Proceed to Checkout</button>
+    </section>
+
+    <!-- Checkout Form Section -->
+    <section class="checkout-form" id="checkout-form" style="display: none;">
+        <h2>Checkout</h2>
+        <form onsubmit="submitOrder(event)">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="address">Delivery Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="payment-method">Payment Method:</label>
+            <select id="payment-method" name="payment-method" required>
+                <option value="credit-card">Credit Card</option>
+                <option value="debit-card">Debit Card</option>
+                <option value="cash-on-delivery">Cash on Delivery</option>
+            </select>
+
+            <input type="submit" value="Place Order">
+        </form>
+    </section>
+
+</div>
+
+<footer>
+    <p>&copy; 2025 Vegetarian Delight Restaurant | All Rights Reserved</p>
+</footer>
+
+<script>
+    let cart = [];
+    let total = 0;
+
+    function addToCart(item, price) {
+        cart.push({ item, price });
+        total += price;
+        updateCart();
+    }
+
+    function updateCart() {
+        let cartItems = document.getElementById('cart-items');
+        cartItems.innerHTML = '';
+        cart.forEach(item => {
+            let div = document.createElement('div');
+            div.classList.add('cart-item');
+            div.innerHTML = `<p>${item.item} - Rs ${item.price}</p>`;
+            cartItems.appendChild(div);
+        });
+        document.getElementById('total-price').innerText = `Total: Rs ${total}`;
+    }
+
+    function checkout() {
+        document.getElementById('cart').style.display = 'none';
+        document.getElementById('checkout-form').style.display = 'block';
+    }
+
+    function submitOrder(event) {
+        event.preventDefault();
+        alert('Order placed successfully! Thank you for ordering.');
+        cart = [];
+        total = 0;
+        updateCart();
+        document.getElementById('checkout-form').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Vegetarian Delight Restaurant for reservations, inquiries, and feedback.">
+    <title>Contact Us - Vegetarian Delight Restaurant</title>
+    
+ 
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+       
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        
+        header {
+            background-color: #5e0635;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #e67e22;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+
+        .contact-info div {
+            width: 48%;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info h3 {
+            color: #5e0635;
+            margin-bottom: 10px;
+        }
+
+        .contact-info p {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .contact-info img {
+            width: 100%;            
+            height: auto;             
+            border-radius: 8px;       
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+            margin-top: 10px;          
+        }
+
+        .contact-form {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form h2 {
+            color: #5e0635;
+        }
+
+        .contact-form label {
+            font-size: 1em;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1em;
+        }
+
+        .contact-form input[type="submit"] {
+            background-color: #2c8a3c;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form input[type="submit"]:hover {
+            background-color: #e67e22;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer-links a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+     
+        @media (max-width: 768px) {
+            .contact-info div {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .contact-form {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Vegetarian Delight Restaurant</h1>
+        <p>Contact Us for reservations, inquiries, and feedback!</p>
+    </header>
+    
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Menu</a>
+        <a href="#">Specials</a>
+        <a href="#">Contact</a>
+        <a href="#">Order Online</a>
+    </nav>
+    
+    <div class="container">
+        <section class="contact-info">
+          
+            <div>
+                <h3>Our Location</h3>
+                <p>CIDCO N1, near Railway Station, Aurangabad.</p>
+                <p>Phone: +91 3569423242</p>
+                <p>Email: contact@vegetariandelight.com</p>
+
+              
+                <img src="map.webp" alt="Vegetarian Delight Location">
+            </div>
+        </section>
+
+        <section class="contact-form">
+            <h2>Get in Touch with Us</h2>
+            <form action="#" method="post">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <input type="submit" value="Send Message">
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Vegetarian Delight Restaurant | All Rights Reserved</p>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">FAQ</a>
+        </div>
+    </footer>
+</body>
+</html>

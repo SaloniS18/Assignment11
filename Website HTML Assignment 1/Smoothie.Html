@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vegan Burgers - Our Restaurant</title>
+  <style>
+   
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+      padding: 0;
+      margin: 0;
+    }
+
+ 
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 36px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero {
+      background-color: #5eaf6a;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      animation: slideIn 1s ease-in-out;
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero h2 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-top: 10px;
+      font-weight: 400;
+    }
+
+    @keyframes slideIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .Smoothie-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 30px;
+      justify-items: center;
+      grid-template-rows: auto;
+      margin-top: 20px;
+    }
+
+   
+    .Smoothie-card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      width: 100%;
+      height: auto;
+      box-sizing: border-box;
+    }
+
+    .Smoothie-card img {
+      max-width: 100%;
+      border-radius: 12px;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .Smoothie-card h3 {
+      font-size: 26px;
+      margin-top: 15px;
+      color: #333;
+      transition: color 0.3s ease;
+    }
+
+    .Smoothie-card p {
+      font-size: 16px;
+      color: #555;
+      margin-top: 10px;
+    }
+
+    .Smoothie-card .price {
+      font-size: 20px;
+      font-weight: bold;
+      color: #e74c3c;
+      margin-top: 15px;
+    }
+
+    .Smoothie-card .order-btn {
+      background-color: #5eaf6a;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 16px;
+      border-radius: 5px;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .Smoothie-card .order-btn:hover {
+      background-color: #4a9e57;
+    }
+
+    .Smoothie-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .Smoothie-card:hover img {
+      transform: scale(1.1);
+    }
+
+    .Smoothie-card:hover h3 {
+      color: #27ae60;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 20px;
+      margin-top: 50px;
+    }
+
+
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 32px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      .Smoothie-card {
+        padding: 15px;
+      }
+
+      .Smoothie-card h3 {
+        font-size: 22px;
+      }
+
+      .Smoothie-card p {
+        font-size: 14px;
+      }
+
+      .Smoothie-card img {
+        height: 180px;
+      }
+    }
+
+    .order-btn:focus {
+      outline: 3px solid #e74c3c;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Our Restaurant</h1>
+  </header>
+
+  <section class="hero">
+    <h2>Smoothies - Deliciously Plant-Based</h2>
+    <p>Browse our selection of Smoothies made with fresh, plant-based ingredients. Perfect for everyone!</p>
+  </section>
+
+  <section class="Smoothie-grid">
+    <!-- Smoothie 1 -->
+    <div class="Smoothie-card">
+      <img src="pineapple-grn-smoothie.webp" alt="Pineapple Green Smoothie">
+      <h3>Pineapple Green Smoothie</h3>
+      <p>Use ripe bananas for this creamy Greek yogurt, spinach, and pineapple smoothie. Chia seeds add healthy omega-3 fats, fiber, and a little protein for an extra nutritional boost.</p>
+      <p class="price">RS 550</p>
+      <button class="order-btn">Order Now</button>
+    </div>
+
+    <!-- Smoothie 2 -->
+    <div class="Smoothie-card">
+      <img src="Mango-Raspberry-Smoothie-.webp" alt="Mango Raspberry Smoothie">
+      <h3>Mango Raspberry Smoothie</h3>
+      <p>A squeeze of lemon juice adds bright flavor to this frozen fruit smoothie. Mango provides plenty of sweetness without adding sugar.</p>
+      <p class="price">Rs 300</p>
+      <button class="order-btn">Order Now</button>
+    </div>
+
+    <!-- Smoothie 3 -->
+    <div class="Smoothie-card">
+      <img src="Strawbeery  Blueberry banana somethies.webp" alt="Strawberry-Blueberry, Banana Smoothie">
+      <h3>Strawberry-Blueberry Smoothie</h3>
+      <p>A smoothie with strawberries, blueberries, and banana is delicately sweet and entirely kid-friendly. </p>
+      <p class="price">Rs 190</p>
+      <button class="order-btn">Order Now</button>
+    </div>
+
+    <!-- Smoothie 4 -->
+    <div class="Smoothie-card">
+        <img src="Chocolate Banana Smoothie.webp" alt="Chocolate-Banana protein Smoothie">
+        <h3>Chocolate-Banana protein Smoothie</h3>
+        <p>Red lentils give this smoothie a plant-based protein boost. To make this smoothie vegan, try using unsweetened coconut beverage or almond milk in place of the dairy milk..</p>
+        <p class="price">Rs 840</p>
+        <button class="order-btn">Order Now</button>
+      </div>
+    <!-- Smoothie 5 -->
+    <div class="Smoothie-card">
+        <img src="Mango Ginger.webp" alt="Mango-Ginger Smoothie">
+        <h3>Mango-Ginger Smoothie</h3>
+        <p>Red lentils are a sneaky source of plant-based protein in this healthy smoothie recipe. The lentils add 3 grams more protein than an equal-size portion of nonfat plain yogurt and 4 grams more fiber than a typical serving of protein powder..</p>
+        <p class="price">Rs 140</p>
+        <button class="order-btn">Order Now</button>
+      </div>
+      
+   <!-- Smoothie 6 -->
+   <div class="Smoothie-card">
+    <img src="pineapple-spinach-smoothie-.webp" alt="Pineapple-Spinach Smoothie">
+    <h3>Pineapple-Spinach Smoothie</h3>
+    <p>Use juice rather than added sugar, such as honey or maple syrup, to balance the bitter taste of greens and suddenly you have a serving of vegetables that tastes like dessert. .</p>
+    <p class="price">Rs 240</p>
+    <button class="order-btn">Order Now</button>
+  </div>
+     <!-- Smoothie 7 -->
+     <div class="Smoothie-card">
+        <img src="Coconut-Blueberry-Smoothie-.webp" alt="Coconut Blueberry Smoothie">
+        <h3>Coconut Blueberry Smoothie</h3>
+        <p> Give your blueberry smoothie a tropical update with the rich flavors of coconut milk and coconut cream. Freshly squeezed orange juice lends bright flavor to this healthy smoothie recipe.</p>
+        <p class="price">Rs 220</p>
+        <button class="order-btn">Order Now</button>
+      </div>
+     <!-- Smoothie 8 -->
+     <div class="Smoothie-card">
+        <img src="apple peanut Butter Smoothies.webp" alt="Apple Peanut Butter Smoothie">
+        <h3>Apple Peanut Butter Smoothie</h3>
+        <p>Apples and peanut butter are a classic pair. Try them blended together in this healthy smoothie recipe.</p>
+        <p class="price">Rs 840</p>
+        <button class="order-btn">Order Now</button>
+      </div>
+        <!-- Smoothie 9 -->
+     <div class="Smoothie-card">
+        <img src="Pumpkin Pie smoothie.webp" alt="Pumpkin Pie Smoothie">
+        <h3>Pumpkin Pie Smoothie</h3>
+        <p>This healthy smoothie recipe has all the flavor of a pumpkin spice latte without added  sugar. Made with real pumpkin and frozen banana.</p>
+        <p class="price">Rs 740</p>
+        <button class="order-btn">Order Now</button>
+      </div>
+        <!-- Smoothie 10 -->
+             <div class="Smoothie-card">
+                <img src="creamy-strawberry-smoothie-.webp" alt="Creamy Strawbeery Smoothie">
+                <h3>Creamy Strawbeery Smoothie</h3>
+                <p>It's hard to beat this recipe for quick and easy strawberry smoothies. All you need is five ingredients and five minutes. It's versatile too: you can use any unsweetened milk for creaminess, your preferred yogurt and honey .</p>
+                <p class="price">Rs 540</p>
+                <button class="order-btn">Order Now</button>
+              </div> 
+
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Our Restaurant. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

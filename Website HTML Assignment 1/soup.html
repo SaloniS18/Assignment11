@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vegan Burgers - Our Restaurant</title>
+  <style>
+   
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+  
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+      padding: 0;
+      margin: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 36px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero {
+      background-color: #5eaf6a;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      animation: slideIn 1s ease-in-out;
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero h2 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-top: 10px;
+      font-weight: 400;
+    }
+
+    
+    @keyframes slideIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .Soup-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 30px;
+      justify-items: center;
+      grid-template-rows: auto;
+      margin-top: 20px;
+    }
+
+
+    .Soup-card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      width: 100%;
+      height: auto;
+      box-sizing: border-box;
+    }
+
+    .Soup-card img {
+      max-width: 100%;
+      border-radius: 12px;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .Soup-card h3 {
+      font-size: 26px;
+      margin-top: 15px;
+      color: #333;
+      transition: color 0.3s ease;
+    }
+
+    .Soup-card p {
+      font-size: 16px;
+      color: #555;
+      margin-top: 10px;
+    }
+
+    .Soup-card .price {
+      font-size: 20px;
+      font-weight: bold;
+      color: #e74c3c;
+      margin-top: 15px;
+    }
+
+    .Soup-card .order-btn {
+      background-color: #5eaf6a;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 16px;
+      border-radius: 5px;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .Soup-card .order-btn:hover {
+      background-color: #4a9e57;
+    }
+
+
+    .Soup-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .Soup-card:hover img {
+      transform: scale(1.1);
+    }
+
+    .Soup-card:hover h3 {
+      color: #27ae60;
+    }
+
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 20px;
+      margin-top: 50px;
+    }
+
+
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 32px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      .Soup-card {
+        padding: 15px;
+      }
+
+      .Soup-card h3 {
+        font-size: 22px;
+      }
+
+      .Soup-card p {
+        font-size: 14px;
+      }
+
+      .Soup-card img {
+        height: 180px;
+      }
+    }
+
+
+    .order-btn:focus {
+      outline: 3px solid #e74c3c;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Our Restaurant</h1>
+  </header>
+
+  <section class="hero">
+    <h2>Soup - Deliciously Plant-Based</h2>
+    <p>Browse our selection of Soup made with fresh, plant-based ingredients. Perfect for everyone!</p>
+  </section>
+
+  <section class="Soup-grid">
+    <!-- Soup 1 -->
+    <div class="Soup-card">
+      <img src="Broccoli-Potato-Soup-009.webp" alt="Creamy Vegan Broccoli Soup">
+      <h3>Creamy Vegan Broccoli Soup</h3>
+      <p>Here’s a vegan broccoli soup that will become an instant favorite. It’s creamy by way of a few ingredient tricks (like cashews), and vegan and gluten-free. It tastes like that cozy and comforting broccoli cheese soup from a can, but better!.</p>
+      <p class="price">RS 357</p>
+      <button class="order-btn">Order Now</button>
+    </div>
+
+    <!-- Soup 2 -->
+    <div class="Soup-card">
+      <img src="Bean-Soup-006.webp" alt="Classic Bean Soup">
+      <h3>Classic Bean Soup</h3>
+      <p>Here’s a cozy bowl that’s so hearty and satisfying, you’ll never want to put your spoon down. Kidney beans and navy beans float in a savory, smoky broth of fire roasted tomatoes that has just the right glossy texture. It uses canned beans, but it tastes like it’s been simmering all day. Each silky, smoky spoonful is a bit of heaven..</p>
+      <p class="price">Rs 190</p>
+      <button class="order-btn">Order Now</button>
+    </div>
+
+    <!-- Soup 3 -->
+    <div class="Soup-card">
+      <img src="Lentil-Sweet-Potato-Soup-0014 (1).webp" alt="Sweet Potato Lentil Soup">
+      <h3>Sweet Potato Lentil Soup</h3>
+      <p>This sweet potato lentil soup is cozy and creamy: a delicious mix of aromatic vegetables with a hint of savory spices. It’s a healthy vegan soup that’s also budget friendly—great as a dinner idea with crusty bread or a simple make ahead lunch..</p>
+      <p class="price">Rs 340</p>
+      <button class="order-btn">Order Now</button>
+    </div>
+
+    <!-- Soup 4 -->
+    <div class="Soup-card">
+        <img src="White-Bean-Soup-050.webp" alt="Cozy White Bean Soup">
+        <h3>Cozy White Bean Soup</h3>
+        <p>Here’s a vegan soup recipe you’ll immediately add to your regular rotation. Try this White Bean Soup, full of humble ingredients and huge flavor! Tender white beans float in the cozy broth with soft potatoes and leafy kale. Lemon zest lends brightness and tarragon brings an herby nuance..</p>
+        <p class="price">Rs 740</p>
+        <button class="order-btn">Order Now</button>
+      </div>
+    <!-- Soup 5 -->
+    <div class="Soup-card">
+        <img src="Cabbage-Soup-002.jpg" alt="Cabbage Soup">
+        <h3>Cabbage Soup</h3>
+        <p>Try this easy Cabbage Soup recipe! Though it’s humble, cabbage makes incredibly satisfying dishes dressed up as sauteed cabbage or coleslaw. Here it makes a hearty, satisfying soup, packed with veggies that swim in a savory-spiced broth of fire roasted tomatoes..</p>
+        <p class="price">Rs 910</p>
+        <button class="order-btn">Order Now</button>
+      </div>
+      
+   <!-- Soup 6 -->
+   <div class="Soup-card">
+    <img src="Carrot-Ginger-Soup-014.webp" alt="Carrot Ginger Soup">
+    <h3>Carrot Ginger Soup</h3>
+    <p>Here’s a bright orange puree that that tastes like sunshine: Carrot Ginger Soup! This recipe is ideal for when you’ve got a big bag of carrots to use up, or when you’re in the midst of a gray season craving sun. We often avoid pureed soups around here because they’re not filling enough to be a meal. But this vegan soup: this one’s worth taking time for! .</p>
+    <p class="price">Rs 540</p>
+    <button class="order-btn">Order Now</button>
+  </div>
+     <!-- Soup 7 -->
+     <div class="Soup-card">
+        <img src="Vegan-Mushroom-Soup-017.jpg" alt="Creamy Mushroom Soup">
+        <h3>Creamy Mushroom Soup</h3>
+        <p> Baby bella mushrooms are perfect in soup! What’s better than a steaming cup of mushroom soup to warm your insides? This one delivers with flavor: the umami of the mushrooms against the creamy broth is absolute magic..</p>
+        <p class="price">Rs 240</p>
+        <button class="order-btn">Order Now</button>
+      </div>
+     <!-- Soup 8 -->
+     <div class="Soup-card">
+        <img src="Tomato-Basil-Soup-005.webp" alt="Tomato Basil Soup">
+        <h3>Tomato Basil Soup</h3>
+        <p>What’s more classic than tomato basil soup? This one is oh so easy to make. Chop some veggies, simmer, then blend. All hail the tomato basil soup! It couldn’t be cozier; even more so accompanied by crusty bread. This version is a gluten free, dairy free and vegan soup recipe, so it fits many diets..</p>
+        <p class="price">Rs 680</p>
+        <button class="order-btn">Order Now</button>
+      </div>
+        <!-- Soup 9 -->
+     <div class="Soup-card">
+        <img src="Black-Bean-Soup-007.webp" alt="Black Bean Soup">
+        <h3>Black Bean Soup</h3>
+        <p>Want to make black bean soup and don’t have time to cook dried beans? It’s creamy, garlicky and hearty, and a big bowl feels positively restorative. Top it with pico de gallo for a bright and zingy contrast in flavors.</p>
+        <p class="price">Rs 140</p>
+        <button class="order-btn">Order Now</button>
+      </div>
+        <!-- Soup 10 -->
+             <div class="Soup-card">
+                <img src="Tomato-Sage-Chickpea-Soup-033 (1).jpg" alt="Tomato Saga Chickpea Soup">
+                <h3>Tomato Saga Chickpea Soup</h3>
+                <p>This tomato sage chickpea soup is savory, cozy and comforting…the classic antidote to a gray day. This vegan soup features sliced onions instead of the typical diced, which add a unique extra texture to the dish. The other stars are dried porcini mushrooms, which add a hefty umami to the dish, and fresh sage, which tastes like the culinary form of a hug..</p>
+                <p class="price">Rs 670</p>
+                <button class="order-btn">Order Now</button>
+              </div> 
+  
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Our Restaurant. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

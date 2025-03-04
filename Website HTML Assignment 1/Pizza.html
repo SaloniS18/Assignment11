@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vegan Pizzas - Our Restaurant</title>
+  <style>
+ 
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 36px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .hero {
+      background-color: #5eaf6a;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      animation: slideIn 1s ease-in-out;
+    }
+
+    .hero h2 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-top: 10px;
+      font-weight: 400;
+    }
+
+   
+    @keyframes slideIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+   
+    .pizza-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 30px;
+      justify-items: center;
+    }
+
+  
+    .pizza-card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .pizza-card img {
+      max-width: 100%;
+      border-radius: 12px;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .pizza-card h3 {
+      font-size: 26px;
+      margin-top: 15px;
+      color: #333;
+    }
+
+    .pizza-card p {
+      font-size: 16px;
+      color: #555;
+      margin-top: 10px;
+    }
+
+    .pizza-card .price {
+      font-size: 20px;
+      font-weight: bold;
+      color: #e74c3c;
+      margin-top: 15px;
+    }
+
+    .pizza-card .order-btn {
+      background-color: #5eaf6a;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 16px;
+      border-radius: 5px;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .pizza-card .order-btn:hover {
+      background-color: #4a9e57;
+    }
+
+   
+    .pizza-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .pizza-card:hover img {
+      transform: scale(1.1);
+    }
+
+  
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 20px;
+      margin-top: 50px;
+    }
+
+  
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 32px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      .pizza-card {
+        padding: 15px;
+      }
+
+      .pizza-card h3 {
+        font-size: 22px;
+      }
+
+      .pizza-card p {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Our Restaurant</h1>
+  </header>
+
+  <section class="hero">
+    <h2>Vegan Pizzas - Deliciously Plant-Based</h2>
+    <p>Browse our selection of vegan pizzas made with fresh, plant-based ingredients. Perfect for everyone!</p>
+  </section>
+
+  <section class="pizza-grid">
+    <!-- Pizza 1 -->
+    <div class="pizza-card">
+      <img src="Vegan-Margherita-Pizza.jpg" alt="Vegan Margherita">
+      <h3>Vegan Margherita</h3>
+      <p>Classic pizza topped with vegan mozzarella, fresh tomatoes, basil, and tomato sauce.</p>
+      <p class="price">RS 750</p>
+      <button class="order-btn">Order Now</button>
+    </div>
+
+    <!-- Pizza 2 -->
+    <div class="pizza-card">
+      <img src="vegan pepron.jpg" alt="Vegan Pepperoni">
+      <h3>Vegan Pepperoni</h3>
+      <p>A spicy vegan pepperoni pizza with vegan cheese and fresh veggies.</p>
+      <p class="price">Rs 1200</p>
+      <button class="order-btn">Order Now</button>
+    </div>
+
+    <!-- Pizza 3 -->
+    <div class="pizza-card">
+      <img src="veggi delight.jpg" alt="Vegan Veggie Delight">
+      <h3>Vegan Veggie Delight</h3>
+      <p>Loaded with fresh veggies, including mushrooms, olives, bell peppers, and onions.</p>
+      <p class="price">Rs 240</p>
+      <button class="order-btn">Order Now</button>
+    </div>
+
+    <!-- Pizza 4 -->
+    <div class="pizza-card">
+      <img src="bbq.jpg" alt="Vegan BBQ">
+      <h3>Vegan BBQ</h3>
+      <p>Sweet and smoky BBQ sauce with vegan cheese, onions, and mushrooms.</p>
+      <p class="price">Rs 450</p>
+      <button class="order-btn">Order Now</button>
+    </div>
+
+    <!-- Pizza 5 -->
+    <div class="pizza-card">
+      <img src="hawaiian.jpg" alt="Vegan Hawaiian">
+      <h3>Vegan Hawaiian</h3>
+      <p>Vegan ham, pineapple, and vegan cheese topped with a tangy sauce.</p>
+      <p class="price">Rs 300</p>
+      <button class="order-btn">Order Now</button>
+    </div>
+
+  <!-- Pizza 6 -->
+  <div class="pizza-card">
+    <img src="white bean sauce.jpg" alt="White Bean Sauce Pizza">
+    <h3>White Bean Sauce Pizza</h3>
+    <p>Vegan ham, pineapple, and vegan cheese topped with a tangy sauce.</p>
+    <p class="price">Rs425</p>
+    <button class="order-btn">Order Now</button>
+  </div>
+<!-- Pizza 7 -->
+<div class="pizza-card">
+    <img src="pesto.jpg" alt="Pesto Pizza">
+    <h3>Pesto Pizza</h3>
+    <p>Vegan ham, pineapple, and vegan cheese topped with a tangy sauce.</p>
+    <p class="price">Rs 1200</p>
+    <button class="order-btn">Order Now</button>
+  </div>
+
+<!-- Pizza 8 -->
+<div class="pizza-card">
+    <img src="SweetCornPizza.jpg" alt="Vegan Creamed Corn Pizza">
+    <h3>Vegan Creamed Corn Pizza</h3>
+    <p>Vegan ham, pineapple, and vegan cheese topped with a tangy sauce.</p>
+    <p class="price">Rs 580</p>
+    <button class="order-btn">Order Now</button>
+  </div>
+<!-- Pizza 9 -->
+<div class="pizza-card">
+    <img src="Vegan-Margherita-Pizza.jpg" alt="Vegan White Sauce Pizza">
+    <h3>Vegan White Sauce Pizza</h3>
+    <p>Vegan ham, pineapple, and vegan cheese topped with a tangy sauce.</p>
+    <p class="price">Rs 310</p>
+    <button class="order-btn">Order Now</button>
+  </div>
+  <!-- Pizza 10 -->
+<div class="pizza-card">
+    <img src="vegan pepron.jpg" alt="Vegan Cheese Pizza">
+    <h3>Vegan Cheese Pizza</h3>
+    <p>Vegan ham, pineapple, and vegan cheese topped with a tangy sauce.</p>
+    <p class="price">Rs 1000</p>
+    <button class="order-btn">Order Now</button>
+  </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Our Restaurant. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

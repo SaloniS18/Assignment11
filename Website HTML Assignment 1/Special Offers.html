@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Special Offers - Vegetarian Delight</title>
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+      padding: 0;
+      margin: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 36px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    
+    .hero {
+      background-color: #5eaf6a;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      animation: slideIn 1s ease-in-out;
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero h2 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-top: 10px;
+      font-weight: 400;
+    }
+
+
+    @keyframes slideIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .offer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 30px;
+      justify-items: center;
+      grid-template-rows: auto;
+      margin-top: 20px;
+    }
+
+    
+    .offer-card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      width: 100%;
+      height: auto;
+      box-sizing: border-box;
+    }
+
+    .offer-card img {
+      max-width: 100%;
+      border-radius: 12px;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .offer-card h3 {
+      font-size: 26px;
+      margin-top: 15px;
+      color: #333;
+      transition: color 0.3s ease;
+    }
+
+    .offer-card p {
+      font-size: 16px;
+      color: #555;
+      margin-top: 10px;
+    }
+
+    .offer-card .price {
+      font-size: 20px;
+      font-weight: bold;
+      color: #e74c3c;
+      margin-top: 15px;
+    }
+
+    .offer-card .order-btn {
+      background-color: #5eaf6a;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 16px;
+      border-radius: 5px;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .offer-card .order-btn:hover {
+      background-color: #4a9e57;
+    }
+
+
+    .offer-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .offer-card:hover img {
+      transform: scale(1.1);
+    }
+
+    .offer-card:hover h3 {
+      color: #27ae60;
+    }
+
+  
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 20px;
+      margin-top: 50px;
+    }
+
+    
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 32px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      .offer-card {
+        padding: 15px;
+      }
+
+      .offer-card h3 {
+        font-size: 22px;
+      }
+
+      .offer-card p {
+        font-size: 14px;
+      }
+
+      .offer-card img {
+        height: 180px;
+      }
+    }
+
+  
+    .order-btn:focus {
+      outline: 3px solid #e74c3c;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Vegetarian Delight Restaurant</h1>
+  </header>
+
+  <section class="hero">
+    <h2>Special Offers - Limited Time Only!</h2>
+    <p>Enjoy exclusive discounts on our special dishes. Don't miss out on these amazing deals!</p>
+  </section>
+
+  <section class="offer-grid">
+    <!-- Offer 1: Combo Meal -->
+    <div class="offer-card">
+      <img src="veggi burger combo.jpg" alt="Veggie Burger Meal Combo">
+      <h3>Veggie Burger Combo</h3>
+      <p>Get a delicious Veggie Burger with fries and a refreshing drink, all for a discounted price!</p>
+      <p class="price">Rs 250 (Was Rs 350)</p>
+      <button class="order-btn">Order Now</button>
+    </div>
+
+    <!-- Offer 2: Family Special -->
+    <div class="offer-card">
+      <img src="large veggi pizza.jpg" alt="Family Special Meal">
+      <h3>Family Special Meal</h3>
+      <p>Enjoy a hearty meal with your family, including 2 large veggie pizzas and 2 sides for the perfect night in!</p>
+      <p class="price">Rs 700 (Was Rs 950)</p>
+      <button class="order-btn">Order Now</button>
+    </div>
+
+    <!-- Offer 3: Smoothie Discount -->
+    <div class="offer-card">
+      <img src="by one get one free.jpg" alt="Smoothie Discount">
+      <h3>Buy 1 Get 1 Free Smoothie</h3>
+      <p>Buy any smoothie and get another one for free! Choose from our wide variety of refreshing plant-based smoothies.</p>
+      <p class="price">Rs 150</p>
+      <button class="order-btn">Order Now</button>
+    </div>
+   <!-- Offer 4: Soup Combo -->
+   <div class="offer-card">
+    <img src="soup combo.jpg" alt="Soup Combo">
+    <h3>Soup Combo</h3>
+    <p>Enjoy a comforting bowl of our homemade soup paired with a warm bread roll, all for an unbeatable price!</p>
+    <p class="price">Rs 180 (Was Rs 250)</p>
+    <button class="order-btn">Order Now</button>
+  </div>
+  
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Vegetarian Delight Restaurant. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

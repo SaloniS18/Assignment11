@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Salad Bowl - Our Restaurant</title>
+  <style>
+     
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+      padding: 0;
+      margin: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 36px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero {
+      background-color: #5eaf6a;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      animation: slideIn 1s ease-in-out;
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero h2 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-top: 10px;
+      font-weight: 400;
+    }
+
+    @keyframes slideIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+ 
+    .SaladBowl-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 30px;
+      justify-items: center;
+      grid-template-rows: auto;
+      margin-top: 20px;
+    }
+
+
+    .SaladBowl-card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      width: 100%;
+      height: auto;
+      box-sizing: border-box;
+    }
+
+    .SaladBowl-card img {
+      max-width: 100%;
+      border-radius: 12px;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .SaladBowl-card h3 {
+      font-size: 26px;
+      margin-top: 15px;
+      color: #333;
+      transition: color 0.3s ease;
+    }
+
+    .SaladBowl-card p {
+      font-size: 16px;
+      color: #555;
+      margin-top: 10px;
+    }
+
+    .SaladBowl-card .price {
+      font-size: 20px;
+      font-weight: bold;
+      color: #e74c3c;
+      margin-top: 15px;
+    }
+
+    .SaladBowl-card .order-btn {
+      background-color: #5eaf6a;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 16px;
+      border-radius: 5px;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .SaladBowl-card .order-btn:hover {
+      background-color: #4a9e57;
+    }
+
+    .SaladBowl-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .SaladBowl-card:hover img {
+      transform: scale(1.1);
+    }
+
+    .SaladBowl-card:hover h3 {
+      color: #27ae60;
+    }
+
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 20px;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 32px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      .SaladBowl-card {
+        padding: 15px;
+      }
+
+      .SaladBowl-card h3 {
+        font-size: 22px;
+      }
+
+      .SaladBowl-card p {
+        font-size: 14px;
+      }
+
+      .SaladBowl-card img {
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Our Restaurant</h1>
+  </header>
+
+  <section class="hero">
+    <h2>Salad Bowl - Deliciously Plant-Based</h2>
+    <p>Browse our selection of vegan salads made with fresh, plant-based ingredients. Perfect for everyone!</p>
+  </section>
+
+  <section class="SaladBowl-grid">
+    <!-- Salad Bowl 1 -->
+    <div class="SaladBowl-card">
+      <img src="Corn-Salad-010.jpg" alt="Corn Salad">
+      <h3>Corn Salad</h3>
+      <p>This corn salad recipe is all about fresh flavor: sweet bursts of corn, juicy tomatoes, and herbaceous basil pair with a tangy, light vinaigrette.</p>
+      <p class="price">RS 360</p>
+      <button class="order-btn">Order Now</button>
+    </div>
+
+    <!-- Salad Bowl 2 -->
+    <div class="SaladBowl-card">
+      <img src="Balsamic-Tomato-Salad-003 (1).webp" alt="Tomato Salad">
+      <h3>Tomato Salad</h3>
+      <p>This balsamic tomato salad might sound simple, but it's utterly divine. It’s all about simplicity: just tomatoes and herbs, marinaded in balsamic and olive oil.</p>
+      <p class="price">Rs 700</p>
+      <button class="order-btn">Order Now</button>
+    </div>
+
+    <!-- Salad Bowl 3 -->
+    <div class="SaladBowl-card">
+      <img src="Chopped-Salad-007.webp" alt="Best Chopped Salad">
+      <h3>Best Chopped Salad</h3>
+      <p>This chopped salad will amaze everyone around the table! There’s our homemade Italian dressing, tangy, savory, herby and balanced. Add to that shallots, tomatoes, cucumber, and a zing from pepperoncini</p>
+      <p class="price">Rs 640</p>
+      <button class="order-btn">Order Now</button>
+    </div>
+
+    <!-- Salad Bowl 4 -->
+    <div class="SaladBowl-card">
+      <img src="Apple-Salad-010 (1).jpg" alt="Apple Salad">
+      <h3>Apple Salad</h3>
+      <p>Crisp tart apple slices pair with pops of pomegranate seeds, creamy goat cheese, and crunchy, cinnamon-spiced pecans.</p>
+      <p class="price">Rs 350</p>
+      <button class="order-btn">Order Now</button>
+    </div>
+
+    <!-- Salad Bowl 5 -->
+    <div class="SaladBowl-card">
+      <img src="Mediterranean-Salad-0009.webp" alt="Mediterranean Salad">
+      <h3>Mediterranean Salad</h3>
+      <p>This salad stars crunchy veggies like cucumber and onion, salty pops of feta cheese and Kalamata olives, and handfuls of fresh herbs. </p>
+      <p class="price">Rs 200</p>
+      <button class="order-btn">Order Now</button>
+    </div>
+
+    <!-- Salad Bowl 6 -->
+    <div class="SaladBowl-card">
+      <img src="Butter-Lettuce-Salad-004.jpg" alt="Butter Lettuce Salad">
+      <h3>Butter Lettuce Salad</h3>
+      <p>The delicate lettuce leaves are irresistible coated in creamy, savory Parmesan Peppercorn dressing and topped with a few simple veggies and Parmesan shavings.</p>
+      <p class="price">Rs 510</p>
+      <button class="order-btn">Order Now</button>
+    </div>
+
+    <!-- Salad Bowl 7 -->
+    <div class="SaladBowl-card">
+      <img src="Strawberry-Salad-0004.jpg" alt="Strawberry Salad">
+      <h3>Strawberry Salad</h3>
+      <p>This simple salad pairs strawberries with balsamic vinaigrette, red onions, and toasted almonds.</p>
+      <p class="price">Rs 800</p>
+      <button class="order-btn">Order Now</button>
+    </div>
+
+    <!-- Salad Bowl 8 -->
+    <div class="SaladBowl-card">
+      <img src="Pear-Salad-012-1.jpg" alt="Pear Salad With Pecans">
+      <h3>Pear Salad With Pecans</h3>
+      <p>Fresh pear against gorgonzola cheese, bright pomegranate, savory shallot, toasted pecans, and a tangy poppy seed dressing.</p>
+      <p class="price">Rs 480</p>
+      <button class="order-btn">Order Now</button>
+    </div>
+
+    <!-- Salad Bowl 9 -->
+    <div class="SaladBowl-card">
+      <img src="Pomegranate-Salad-018.webp" alt="Pomegranate Salad">
+      <h3>Pomegranate Salad</h3>
+      <p>Crunchy pomegranate seeds make a beautiful confetti over leafy greens, tart green apple slices, toasted pecans, and feta or goat cheese crumbles.</p>
+      <p class="price">Rs 650</p>
+      <button class="order-btn">Order Now</button>
+    </div>
+
+    <!-- Salad Bowl 10 -->
+    <div class="SaladBowl-card">
+      <img src="Spinach-Salad-010.webp" alt="Spinach Salad">
+      <h3>Spinach Salad</h3>
+      <p>Full of texture and flavor contrasts, this spinach salad features smoky pecans, hard-boiled eggs, and a crisp-tart apple.</p>
+      <p class="price">Rs 1000</p>
+      <button class="order-btn">Order Now</button>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Our Restaurant. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
